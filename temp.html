@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Temperature Update</title>
+    <style>
+      body {
+        background-image: url(/weather.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex justify-center mt-20">
+      <div class="w-96">
+          <input id="input"
+            class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+            placeholder="Search City For Weather Temperature.."
+            type="text"
+            name="search"
+          />
+          <div class="flex justify-center">
+            <button onclick="checkWeather()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Search
+              </button>
+          </div>
+      </div>
+    </div>
+
+    <div class="city___name mt-10">
+        <p id="city-name" class="text-5xl text-white text-center">No City</p>
+        <p class="text-3xl text-white text-center mt-4"><span id="temp">0</span>&#8451;</p>
+        <p id="weather" class="text-2xl text-white text-center mt-4">No Weather</p>
+    </div>
+    <script src="temp.js"></script>
+  </body>
+</html>
